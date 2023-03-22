@@ -1,0 +1,59 @@
+<p>ng-switch works!</p>
+
+<button class="btn btn-primary" (click)="switchClass('primary')">primary</button>
+<button class="btn btn-secondary" (click)="switchClass('secondary')">secondary</button>
+<button class="btn btn-success" (click)="switchClass('success')">success</button>
+<button class="btn btn-info" (click)="switchClass('info')">info</button>
+<button class="btn btn-danger" (click)="switchClass('danger')">danger</button>
+<button class="btn btn-warning" (click)="switchClass('warning')">warning</button>
+<button class="btn btn-light" (click)="switchClass('light')">light</button>
+<button class="btn btn-dark" (click)="switchClass('dark')">dark</button>
+<button class="btn btn-light" (click)="switchClass('')">none</button>
+
+<div [ngSwitch]="alertValue">
+    <div *ngSwitchCase="'primary'">
+        <div class="alert alert-primary" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchCase="'secondary'">
+        <div class="alert alert-secondary" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchCase="'success'">
+        <div class="alert alert-success" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchCase="'info'">
+        <div class="alert alert-info" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchCase="'warning'">
+        <div class="alert alert-warning" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchCase="'danger'">
+        <div class="alert alert-danger" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchCase="'light'">
+        <div class="alert alert-light" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchCase="'dark'">
+        <div class="alert alert-dark" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+    <div *ngSwitchDefault>
+        <div class="alert alert-light" role="alert">
+            <strong>Well done!</strong> This is a switch alert check it out!
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<p>ng-classes works!</p>
+
+<h3>Asynchronous process.</h3>
+
+<button class="btn btn-dark" (click)="execute()" type="button" name="button" [disabled]="loading">
+    <i class="fa" [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading}"></i>
+    <span *ngIf="!loading"> Save data</span>
+    <span *ngIf="loading"> Saving...</span>
+</button>
+<br>
+<br>
+
+<h3 [ngClass]="{'text-danger': !btnValue, 'text-success': btnValue}">Dummy of classes conditionated by objects.</h3>
+
+<button [ngClass]="{'btn-danger': !btnValue, 'btn-success': btnValue}"
+    (click)="btnValue = !btnValue">{{btnValue}}</button>
+<br>
+<br>
+
+<div [ngClass]="alertClass" role="alert">
+    <strong>Well done!</strong> This is a conditional alert check it out!
+</div>
+<br>
+
+<button class="btn btn-primary" (click)="alertClass = 'alert-primary'">primary</button>
+<button class="btn btn-secondary" (click)="alertClass = 'alert-secondary'">secondary</button>
+<button class="btn btn-success" (click)="alertClass = 'alert-success'">success</button>
+<button class="btn btn-info" (click)="alertClass = 'alert-info'">info</button>
+<button class="btn btn-danger" (click)="alertClass = 'alert-danger'">danger</button>
+<button class="btn btn-warning" (click)="alertClass = 'alert-warning'">warning</button>
+<button class="btn btn-light" (click)="alertClass = 'alert-light'">light</button>
+<button class="btn btn-dark" (click)="alertClass = 'alert-dark'">dark</button>
+<br>
